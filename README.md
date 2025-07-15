@@ -253,11 +253,11 @@ For questions or suggestions, please open an issue on GitHub.
 - **Memory usage**: Optimized for continuous operation
 
 ---
-📖 Appendices
-📌 Appendix A: System Requirements
-Hardware Requirements
+## 📖 Appendices
+### 📌 Appendix A: System Requirements
+### Hardware Requirements
 
-Minimum: Intel Core i3 or equivalent processor
+_ **Minimum: Intel Core i3 or equivalent processor
 
 Recommended: Intel Core i5 or higher
 
