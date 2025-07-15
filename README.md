@@ -253,44 +253,38 @@ For questions or suggestions, please open an issue on GitHub.
 - **Memory usage**: Optimized for continuous operation
 
 ---
-## 📖 Appendices
-### 📌 Appendix A: System Requirements
+# 📖 Appendices
+
+## 📌 Appendix A: System Requirements
+
 ### Hardware Requirements
 
-_ **Minimum: Intel Core i3 or equivalent processor
+- **Minimum**: Intel Core i3 or equivalent processor  
+- **Recommended**: Intel Core i5 or higher  
+- **RAM**: 4GB minimum, 8GB recommended  
+- **Webcam**: USB 2.0 or higher compatible camera  
+- **Storage**: 500MB available space  
 
-Recommended: Intel Core i5 or higher
+### Software Requirements
 
-RAM: 4GB minimum, 8GB recommended
+- **MATLAB**: R2016b or later  
+- **Image Processing Toolbox**  
+- **Computer Vision Toolbox**  
+- **Operating System**: Windows 7/8/10/11, macOS 10.12+, or Linux  
 
-Webcam: USB 2.0 or higher compatible camera
+---
 
-Storage: 500MB available space
+## 📌 Appendix B: Installation Guide
 
-Software Requirements
+### Step 1: MATLAB Installation
 
-MATLAB R2016b or later
+- Install MATLAB from the [MathWorks website](https://www.mathworks.com/).
+- Ensure **Image Processing Toolbox** is included.
+- Ensure **Computer Vision Toolbox** is included.
 
-Image Processing Toolbox
+### Step 2: Toolbox Verification
 
-Computer Vision Toolbox
-
-Operating System: Windows 7/8/10/11, macOS 10.12+, or Linux
-
-📌 Appendix B: Installation Guide
-Step 1: MATLAB Installation
-
-Install MATLAB from MathWorks website.
-
-Ensure Image Processing Toolbox is included.
-
-Ensure Computer Vision Toolbox is included.
-
-Step 2: Toolbox Verification
-
-matlab
-Copy
-Edit
+```matlab
 % Check toolbox availability
 if license('test', 'image_toolbox')
     disp('Image Processing Toolbox: Available');
@@ -303,42 +297,43 @@ if license('test', 'video_and_image_blockset')
 else
     disp('Computer Vision Toolbox: Not Available');
 end
-Step 3: Project Setup
+```
+### Step 3: Project Setup
 
-Download project files.
+- Download project files.
+- Extract to your desired directory.
+- Open MATLAB and navigate to the project directory.
+- Run the main script.
 
-Extract to your desired directory.
+---
 
-Open MATLAB and navigate to the project directory.
+## 📌 Appendix C: Error Handling Guide
 
-Run the main script.
+| Error                  | Solution / Alternative                                |
+|:-----------------------|:------------------------------------------------------|
+| **Webcam not found**        | Check connection, drivers, or try a different webcam. |
+| **Toolbox not available**   | Install required toolboxes or verify MATLAB license.  |
+| **Out of memory**           | Close unnecessary applications or reduce image resolution. |
+| **Detection accuracy low**  | Improve lighting or adjust detector parameters. |
 
-📌 Appendix C: Error Handling Guide
-Error	Solution / Alternative
-Webcam not found	Check connection, drivers, or try a different webcam.
-Toolbox not available	Install required toolboxes or verify MATLAB license.
-Out of memory	Close unnecessary applications or reduce image resolution.
-Detection accuracy low	Improve lighting or adjust detector parameters.
+---
 
-📌 Appendix D: Performance Tuning Parameters
-Face Detector Parameters
+## 📌 Appendix D: Performance Tuning Parameters
 
-matlab
-Copy
-Edit
+### Face Detector Parameters
+
+```matlab
 detector.MergeThreshold = 4;        % Range: 1-10
 detector.MinSize = [60 60];         % Minimum face size
 detector.MaxSize = [300 300];       % Maximum face size
 detector.ScaleFactor = 1.1;         % Scale increment
-Webcam Parameters
+```
+### Webcam Parameters
 
-matlab
-Copy
-Edit
+```matlab
 cam.Resolution = '640x480';         % Resolution setting
 cam.FrameRate = 30;                 % Frame rate
 Performance Parameters
-
 matlab
 Copy
 Edit
@@ -346,7 +341,6 @@ pause_duration = 0.03;              % Frame delay
 memory_cleanup_interval = 100;      % Cleanup frequency
 📌 Appendix E: Test Results Data
 Static Image Detection Results
-
 Test Image	Faces Present	Faces Detected	Accuracy
 Image 1	3	3	100%
 Image 2	1	1	100%
@@ -356,7 +350,6 @@ Image 5	1	1	100%
 Average	2.3	2.1	92.3%
 
 Real-Time Performance Data
-
 Metric	Value	Unit
 Average FPS	30.2	fps
 Detection Latency	42	ms
